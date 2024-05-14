@@ -1,8 +1,10 @@
 <div class="login-page">
-  <div class="d-flex flex-column">
+  <div class="">
     @for (detail of inputDetails; track detail) {
-
-    <app-input [inputDetails]="detail"></app-input>
+    <div class="input-box">
+      <app-input [inputDetails]="detail"></app-input>
+    </div>
     }
+    <app-button [buttonDetail]="buttonDetail"></app-button>
   </div>
 </div>

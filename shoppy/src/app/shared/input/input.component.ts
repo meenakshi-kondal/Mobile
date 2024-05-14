@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { InputData } from 'src/app/interfaces/common';
 
 @Component({
   selector: 'app-input',
@@ -9,13 +10,21 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class InputComponent implements OnInit {
-  @Input() inputDetails = {
+  @Input() inputDetails: InputData = {
     placeholder: '',
+    style: { },
   };
 
   constructor() {}
 
   ngOnInit() {
-    console.log(this.inputDetails)
+    this.inputDetails.style = Object.assign({
+      'font-size': 'var(--important-text-size)',
+      color: 'var(--theme-color)',
+      border: '1px solid var(--theme-color)',
+      padding: '5px !important',
+      width: '300px'
+      
+    }, this.inputDetails.style);
   }
 }
