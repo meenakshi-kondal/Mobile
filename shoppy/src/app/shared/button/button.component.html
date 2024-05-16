@@ -1,1 +1,3 @@
-<ion-button>{{buttonDetail.value}}</ion-button>
+<ion-button [style]="buttonDetail.style" (click)="clickHandler(buttonDetail)">{{ buttonDetail.value }}</ion-button>
+
+

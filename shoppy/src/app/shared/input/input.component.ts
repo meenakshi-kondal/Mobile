@@ -12,19 +12,22 @@ import { InputData } from 'src/app/interfaces/common';
 export class InputComponent implements OnInit {
   @Input() inputDetails: InputData = {
     placeholder: '',
-    style: { },
+    value: '',
+    style: {},
   };
 
   constructor() {}
 
   ngOnInit() {
-    this.inputDetails.style = Object.assign({
-      'font-size': 'var(--important-text-size)',
-      color: 'var(--theme-color)',
-      border: '1px solid var(--theme-color)',
-      padding: '5px !important',
-      width: '300px'
-      
-    }, this.inputDetails.style);
+    this.inputDetails.style = Object.assign(
+      {
+        'font-size': 'var(--important-text-size)',
+        color: 'var(--theme-color)',
+        'border-bottom': '1px solid var(--theme-color)',
+        padding: '5px !important',
+        width: '300px',
+      },
+      this.inputDetails.style
+    );
   }
 }

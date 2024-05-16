@@ -7,18 +7,17 @@ import { InputComponent } from 'src/app/shared/input/input.component';
   templateUrl: './login-page.component.html',
   standalone: true,
   styleUrls: ['./login-page.component.scss'],
-  imports: [InputComponent, ButtonComponent]
+  imports: [InputComponent, ButtonComponent],
 })
-export class LoginPageComponent  implements OnInit {
-  inputDetails = [
-    { placeholder: 'Email'},
-    { placeholder: 'Password'},
-  ];
+export class LoginPageComponent implements OnInit {
+  inputDetails = [{ placeholder: 'Email' }, { placeholder: 'Password' }];
   buttonDetail = {
     value: 'Login',
-  }
-  constructor() { }
+    style: {
+      width: '300px',
+    },
+  };
+  constructor() {}
 
   ngOnInit() {}
-
 }

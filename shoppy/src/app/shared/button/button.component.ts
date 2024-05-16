@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 @Component({
   selector: 'app-button',
@@ -10,10 +10,22 @@ import { IonicModule } from '@ionic/angular';
 export class ButtonComponent implements OnInit {
   @Input() buttonDetail = {
     value: 'Save',
-    
-
+    style: {},
   };
+  @Output() dataEvent = new EventEmitter<string>();
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.buttonDetail.style = Object.assign(
+      {
+        '--background': 'var(--theme-color)',
+        width: '100px',
+      },
+      this.buttonDetail.style
+    );
+  }
+
+  public clickHandler(data: any) {
+    this.dataEvent.emit(data);
+  }
 }
