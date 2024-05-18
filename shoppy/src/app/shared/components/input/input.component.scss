@@ -1,0 +1,15 @@
+ion-item {
+  -–highlight-color-focused: none;
+  --background: transparent !important;
+}
+ion-input {
+  background: var(--input-background);
+  color: "var(--theme-color)";
+  --highlight-color-focused: "var(--theme-color)";
+}
+
+.validate-message {
+  word-wrap: break-word;
+  width: 300px !important;
+  display: block;
+}

@@ -1,10 +1,22 @@
 <div class="login-page">
-  <div class="">
+  <div class="login-tab">
+    <div class="text-center">
+      <img src="../../../../assets/images/logo.png" alt="logo"/>
+    </div>
     @for (detail of inputDetails; track detail) {
-    <div class="input-box">
-      <app-input [inputDetails]="detail"></app-input>
+    <div class="mt-3">
+      <app-input [inputDetails]="detail" (InputEvent)="inputData($event)"></app-input>
     </div>
     }
-    <app-button [buttonDetail]="buttonDetail"></app-button>
+    <div class="text-end">
+      <a href="#" class="base-text-size"> Forgot Password </a>
+    </div>
+    <div class="mt-4">
+      <app-button [buttonDetail]="buttonDetail" (buttonEvent)="login($event)"></app-button>
+    </div>
+ 
+    <div class="my-3 text-center theme-text-color standard-text-size fw-bold">OR</div>
+
+    <app-button [buttonDetail]="loginButton" (buttonEvent)="googleSignIn($event)"></app-button>
   </div>
 </div>

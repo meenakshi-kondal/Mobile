@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { InputData } from 'src/app/interfaces/common';
+import { InputData, InputFormat } from 'src/app/interfaces/common';
 
 @Component({
   selector: 'app-input',
@@ -10,24 +10,34 @@ import { InputData } from 'src/app/interfaces/common';
   imports: [IonicModule],
 })
 export class InputComponent implements OnInit {
+  @Output() InputEvent = new EventEmitter<InputFormat>();
   @Input() inputDetails: InputData = {
     placeholder: '',
     value: '',
     style: {},
+    validateMessage: '',
+    required: false,
+    id: '',
   };
-
-  constructor() {}
+  constructor() {
+    this.inputDetails.value = '';
+  }
 
   ngOnInit() {
     this.inputDetails.style = Object.assign(
       {
-        'font-size': 'var(--important-text-size)',
-        color: 'var(--theme-color)',
-        'border-bottom': '1px solid var(--theme-color)',
         padding: '5px !important',
         width: '300px',
       },
       this.inputDetails.style
     );
+  }
+
+  public inputData(event: any, data: InputData) {
+    const submitInput = {
+      value: event.value,
+      id: data.id ? data.id.trim() : '',
+    };
+    this.InputEvent.emit(submitInput);
   }
 }

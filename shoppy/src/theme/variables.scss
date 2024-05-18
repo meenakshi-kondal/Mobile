@@ -1,9 +1,36 @@
 :root {
-    --theme-color: #616161;
-    --primary-color: #009688;
-    --secondary-color: #F5F5DC;
-    --text-color: #FFFFFF;
-    --default-text-size: 14px;
-    --normal-text-size: 15px;
-    --important-text-size: 18px;
+  --theme-color: #616161;
+  --primary-color: #009688;
+  --secondary-color: #f5f5dc;
+  --primary-text-color: #ffffff;
+  --input-background: rgb(255 255 255 / 44%);
+}
+.base-text-size {
+  font-size: 12px;
+}
+
+.standard-text-size {
+  font-size: 14px;
+}
+
+.highlight-text-size {
+  font-size: 16px;
+}
+
+.theme-text-color {
+  color: var(--theme-color);
+}
+
+.success-toast {
+  color: #28a745; // Green color
+}
+
+// Colors for error toast
+.error-toast {
+  color: #dc3545; // Red color
+}
+
+// Colors for warning toast
+.warning-toast {
+  color: #ffc107; // Yellow color
 }

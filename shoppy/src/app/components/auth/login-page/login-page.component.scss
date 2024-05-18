@@ -10,8 +10,14 @@
     var(--primary-color) 0%,
     var(--secondary-color) 50%
   );
+  .login-tab {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    border-radius: 3px;
 
-  .input-box {
-    margin: 25px 0px;
+    img {
+      width: 170px;
+      height: 180px;
+    }
   }
 }

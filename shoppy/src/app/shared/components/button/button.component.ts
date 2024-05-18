@@ -1,19 +1,27 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { logoGoogle  } from 'ionicons/icons';
+import { ButtonData } from 'src/app/interfaces/common';
+
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
   standalone: true,
-  imports:[IonicModule]
+  imports: [IonicModule],
 })
 export class ButtonComponent implements OnInit {
-  @Input() buttonDetail = {
+  @Output() buttonEvent = new EventEmitter<ButtonData>();
+  @Input() buttonDetail: ButtonData = {
     value: 'Save',
     style: {},
+    icon: ''
   };
-  @Output() dataEvent = new EventEmitter<string>();
-  constructor() {}
+
+  constructor() {
+    addIcons({ 'logo-google': logoGoogle });
+  }
 
   ngOnInit() {
     this.buttonDetail.style = Object.assign(
@@ -23,9 +31,11 @@ export class ButtonComponent implements OnInit {
       },
       this.buttonDetail.style
     );
+    this.buttonDetail.icon = this.buttonDetail.icon ?? '';
   }
 
-  public clickHandler(data: any) {
-    this.dataEvent.emit(data);
+  public clickHandler(data: ButtonData) {
+    this.buttonEvent.emit(data);
   }
+  
 }
