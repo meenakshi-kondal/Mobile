@@ -27,7 +27,6 @@ export class InputComponent implements OnInit {
     this.inputDetails.style = Object.assign(
       {
         padding: '5px !important',
-        width: '300px',
       },
       this.inputDetails.style
     );

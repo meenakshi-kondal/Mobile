@@ -21,16 +21,24 @@
   color: var(--theme-color);
 }
 
+.text-success {
+  color: #28a745;
+}
+
+.text-error {
+  color: #dc3545;
+}
+.text-warning {
+  color: #ffc107;
+}
 .success-toast {
-  color: #28a745; // Green color
+  color: #28a745;
 }
 
-// Colors for error toast
 .error-toast {
-  color: #dc3545; // Red color
+  color: #dc3545;
 }
 
-// Colors for warning toast
 .warning-toast {
-  color: #ffc107; // Yellow color
+  color: #ffc107;
 }

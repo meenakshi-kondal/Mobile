@@ -41,7 +41,7 @@ export class CommonService {
     const toast = await this.toast.create({
       message: message,
       position: 'top',
-      duration: 40000,
+      duration: 4000,
       icon: icon,
       cssClass: cssClass,
       buttons: [

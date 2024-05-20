@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
-<img src="../../../../assets/images/logo.png" />
+    <ion-img src="../../../../assets/images/logo.png" class="home-logo"></ion-img>
+
+ 
   </ion-toolbar>
+  <ion-searchbar [debounce]="1000" (ionInput)="handleSearch($event)"></ion-searchbar>
 </ion-header>

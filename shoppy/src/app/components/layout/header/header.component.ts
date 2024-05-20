@@ -1,17 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent ]
+  imports: [ IonicModule ]
 })
 export class HeaderComponent  implements OnInit {
 
   constructor() { }
 
   ngOnInit() {}
+
+  public handleSearch(data: Event) {
+    console.log({data});
+    
+  }
 
 }

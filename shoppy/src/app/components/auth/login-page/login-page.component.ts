@@ -5,13 +5,14 @@ import { InputComponent } from 'src/app/shared/components/input/input.component'
 import { RESPONSE } from 'src/app/shared/response';
 import { Router } from '@angular/router';
 import { CommonService } from 'src/app/services/common.service';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
   standalone: true,
   styleUrls: ['./login-page.component.scss'],
-  imports: [InputComponent, ButtonComponent],
+  imports: [InputComponent, ButtonComponent, IonicModule],
 })
 export class LoginPageComponent {
   inputDetails = [
@@ -33,13 +34,13 @@ export class LoginPageComponent {
   buttonDetail: ButtonData = {
     value: 'Login',
     style: {
-      width: '300px',
+      width: '330px',
     },
   };
   loginButton: ButtonData = {
     value: 'Sign In',
     style: {
-      width: '300px',
+      width: '330px',
     },
     icon: 'logo-google',
   };

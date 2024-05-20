@@ -27,7 +27,7 @@ export class ButtonComponent implements OnInit {
     this.buttonDetail.style = Object.assign(
       {
         '--background': 'var(--theme-color)',
-        width: '100px',
+        width: 'fit-content',
       },
       this.buttonDetail.style
     );

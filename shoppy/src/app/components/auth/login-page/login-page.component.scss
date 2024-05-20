@@ -14,10 +14,21 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 20px;
     border-radius: 3px;
+  }
+  ion-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ion-img::part(image) {
+    width: 45%;
+  }
+}
 
-    img {
-      width: 170px;
-      height: 180px;
+@media only screen and (min-device-width: 390px) and (max-device-width: 390px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+  .login-page {
+    .login-tab {
+      box-shadow: none;
     }
   }
 }
