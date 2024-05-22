@@ -1,8 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-img src="../../../../assets/images/logo.png" class="home-logo"></ion-img>
+    <div class="d-flex justify-content-between mx-1">
+      <ion-img src="../../../../assets/images/logo.png" class="home-logo"></ion-img>
+      <div class="d-flex align-items-center font-weight-bold text-color heading-title">{{activeTab}}</div>
+      <ion-img src="../../../../assets/icon/cart.svg" class="cart-logo"></ion-img>
+      <span class="cart-count">{{cartCount}}</span>
+    </div>
 
  
   </ion-toolbar>
-  <ion-searchbar [debounce]="1000" (ionInput)="handleSearch($event)"></ion-searchbar>
+  <ion-searchbar [debounce]="1000" (ionInput)="handleSearch($event)"[placeholder]="currentPlaceholder"></ion-searchbar>
 </ion-header>
+
+<app-home-cards></app-home-cards>

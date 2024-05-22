@@ -14,11 +14,15 @@
 }
 
 .highlight-text-size {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .theme-text-color {
   color: var(--theme-color);
+}
+
+.text-color {
+  color: var(--secondary-color);
 }
 
 .text-success {
