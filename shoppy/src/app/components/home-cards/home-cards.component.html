@@ -1,12 +1,16 @@
-<div class="d-flex">
+<div class="row align-items-center m-2">
   @for (detail of cardList; track detail) {
 
-  <div>
+  <div class="col-6 cart-images d-flex flex-column align-items-center justify-content-center">
     <ion-img
       src="../../../../assets/images/{{ detail }}"
-      class="home-logo"
-      width="50%"
+      class="cart"
     ></ion-img>
+
+    <div>
+      <p>Here is me</p>
+    </div>
   </div>
+ 
   }
 </div>
