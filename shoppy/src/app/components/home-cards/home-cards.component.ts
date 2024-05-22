@@ -9,7 +9,7 @@ import { IonicModule } from '@ionic/angular';
 })
 export class HomeCardsComponent  implements OnInit {
   cardList = [
-    'modern_men.png', 'modern_women.png', 'traditional_men.png'
+    'modern_women.png', 'traditional_men.png'
   ];
   constructor() { }
 
