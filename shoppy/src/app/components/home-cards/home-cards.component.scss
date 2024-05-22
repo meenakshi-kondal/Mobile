@@ -1,6 +1,6 @@
 .cart-images {
-  width: 180px;
-  height: 180px;
+  width: 175px;
+  height: 175px;
   border-radius: 4px;
   overflow: hidden;
   background-color: var(--secondary-color);
@@ -14,4 +14,11 @@ ion-img.cart {
 .text-container {
   margin-top: 10px;
   text-align: center;
+}
+
+.cart-container{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 0px;
 }
