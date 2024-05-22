@@ -1,13 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { HomeCardsComponent } from '../../home-cards/home-cards.component';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [IonicModule, HomeCardsComponent],
+  imports: [IonicModule],
 })
 export class HeaderComponent implements OnInit {
   @Input() activeTab = 'Home';

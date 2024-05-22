@@ -1,8 +1,12 @@
 <div class="d-flex">
+  @for (detail of cardList; track detail) {
 
-
-@for (detail of cardList; track detail) {
-
-  <ion-img src="../../../../assets/images/{{detail}}" class="home-logo"></ion-img>
-}
+  <div>
+    <ion-img
+      src="../../../../assets/images/{{ detail }}"
+      class="home-logo"
+      width="50%"
+    ></ion-img>
+  </div>
+  }
 </div>
