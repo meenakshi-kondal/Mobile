@@ -1,12 +1,12 @@
 <ion-input
-class="standard-text-size"
+class="text-14"
   placeholder="{{ inputDetails.placeholder }}"
   value="{{ inputDetails.value }}"
   [style]="inputDetails.style"
   (input)="inputData($event.target, inputDetails)"
 ></ion-input>
 @if(inputDetails.required){
-<span class="text-danger base-text-size mx-1 validate-message">{{
+<span class="text-danger text-12 mx-1 validate-message">{{
   inputDetails.validateMessage
 }}</span>
 }

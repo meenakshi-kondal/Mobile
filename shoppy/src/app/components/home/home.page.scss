@@ -1,4 +1,10 @@
 .home-page {
-  background: var(--primary-color);
+  background: var(--background);
   height: 100%;
+  .home-header {
+    height: 130px;
+    border-bottom-left-radius: 10px;
+    background: var(--primary-color);
+    border-bottom-right-radius: 10px;
+  }
 }

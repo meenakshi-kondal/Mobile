@@ -9,7 +9,7 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class HeaderComponent implements OnInit {
-  @Input() activeTab = 'Home';
+  @Input() activeTab = '';
   cartCount = 15;
   placeholderIndex: number = 0;
   intervalId: any;

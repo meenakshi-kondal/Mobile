@@ -4,20 +4,21 @@
   --secondary-color: #f5f5dc;
   --primary-text-color: #ffffff;
   --input-background: rgb(255 255 255 / 44%);
+  --background: #f8f9fa;
 }
-.base-text-size {
+.text-12 {
   font-size: 12px;
 }
 
-.standard-text-size {
+.text-14 {
   font-size: 14px;
 }
 
-.highlight-text-size {
-  font-size: 18px;
+.text-16 {
+  font-size: 16px;
 }
 
-.theme-text-color {
+.theme-text {
   color: var(--theme-color);
 }
 
